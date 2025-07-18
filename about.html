@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Sushanth Reddy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background-color: #f8f9fa;
+            padding: 2rem 1.5rem;
+            border-right: 1px solid #e9ecef;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .sidebar h1 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        .sidebar .nav-links {
+            margin-bottom: 2rem;
+        }
+
+        .sidebar .nav-links a {
+            display: block;
+            color: #666;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .sidebar .nav-links a:hover {
+            color: #2c3e50;
+        }
+
+        .sidebar .nav-links a.active {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .sidebar .tagline {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            margin-left: 280px;
+            padding: 2rem;
+            background-color: #fff;
+        }
+
+        .about-header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .about-header h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .about-header .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .profile-section {
+            display: flex;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            align-items: flex-start;
+        }
+
+        .profile-image {
+            flex-shrink: 0;
+        }
+
+        .profile-image img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #e9ecef;
+        }
+
+        .profile-placeholder {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 1rem;
+            text-align: center;
+            border: 3px solid #e9ecef;
+        }
+
+        .profile-content {
+            flex: 1;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 0.5rem;
+        }
+
+        .section p {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .skill-category {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+
+        .skill-category h3 {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 0.25rem 0;
+            color: #666;
+        }
+
+        .contact-info {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+
+        .contact-info h3 {
+            font-size: 1.2rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: #3498db;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid #3498db;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .contact-links a:hover {
+            background-color: #3498db;
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sidebar {
+                position: static;
+                width: 100%;
+                height: auto;
+                border-right: none;
+                border-bottom: 1px solid #e9ecef;
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 1rem;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-header h1 {
+                font-size: 2rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h1>Sushanth Reddy</h1>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About</a>
+            </div>
+            <div class="tagline">My Blog</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="about-header">
+                <h1>About Me</h1>
+                <p class="subtitle">Developer • Data Enthusiast • Problem Solver</p>
+            </div>
+
+            <div class="profile-section">
+                <div class="profile-image">
+                    <!-- Replace with your actual image -->
+                    <div class="profile-placeholder">
+                        Add Your Photo Here
+                    </div>
+                    <!-- <img src="your-photo.jpg" alt="Sushanth Reddy"> -->
+                </div>
+                <div class="profile-content">
+                    <div class="section">
+                        <h2>Introduction</h2>
+                        <p>
+                            Hi, I'm Sushanth Reddy, a passionate developer and data enthusiast based in Hyderabad, India. 
+                            I love building things that solve real problems and exploring the intersection of technology and data.
+                        </p>
+                        <p>
+                            When I'm not coding, you can find me analyzing data patterns, writing about tech, or exploring new 
+                            technologies that can make a difference in people's lives.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>What I Do</h2>
+                <p>
+                    I specialize in building scalable web applications and analyzing complex datasets to extract 
+                    meaningful insights. My work spans across full-stack development, data science, and machine learning.
+                </p>
+                <p>
+                    I'm particularly interested in creating solutions that bridge the gap between technical complexity 
+                    and user-friendly experiences.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Skills & Technologies</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>TypeScript</li>
+                            <li>Java</li>
+                            <li>SQL</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Web Technologies</h3>
+                        <ul>
+                            <li>React</li>
+                            <li>Node.js</li>
+                            <li>HTML/CSS</li>
+                            <li>Express.js</li>
+                            <li>REST APIs</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Data & Analytics</h3>
+                        <ul>
+                            <li>Pandas</li>
+                            <li>NumPy</li>
+                            <li>Matplotlib</li>
+                            <li>Jupyter</li>
+                            <li>Power BI</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tools & Platforms</h3>
+                        <ul>
+                            <li>Git</li>
+                            <li>Docker</li>
+                            <li>AWS</li>
+                            <li>PostgreSQL</li>
+                            <li>MongoDB</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Experience</h2>
+                <p>
+                    I have experience working on various projects ranging from web applications to data analysis pipelines. 
+                    My background includes both individual projects and collaborative team efforts in agile environments.
+                </p>
+                <p>
+                    <!-- Add your specific experience details here -->
+                    Feel free to check out my projects and blog posts to see examples of my work and thinking process.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Get In Touch</h2>
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always interested in discussing new opportunities, collaborations, or just talking about technology and data.</p>
+                    <div class="contact-links">
+                        <a href="mailto:your.email@example.com">Email</a>
+                        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                        <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+                        <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
