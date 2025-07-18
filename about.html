@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Sushanth Reddy</title>
+    <title>Sushanth Reddy</title>
     <style>
         * {
             margin: 0;
@@ -13,8 +13,8 @@
 
         body {
             font-family: 'Courier New', Courier, monospace;
-            background-color: #ffffff;
-            color: #333;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
             line-height: 1.6;
         }
 
@@ -28,9 +28,9 @@
         /* Sidebar */
         .sidebar {
             width: 280px;
-            background-color: #f8f9fa;
+            background-color: #2d2d2d;
             padding: 2rem 1.5rem;
-            border-right: 1px solid #e9ecef;
+            border-right: 1px solid #404040;
             position: fixed;
             height: 100vh;
             overflow-y: auto;
@@ -40,7 +40,7 @@
             font-size: 1.25rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
-            color: #2c3e50;
+            color: #f0f0f0;
         }
 
         .sidebar .nav-links {
@@ -49,7 +49,7 @@
 
         .sidebar .nav-links a {
             display: block;
-            color: #666;
+            color: #b0b0b0;
             text-decoration: none;
             margin-bottom: 0.5rem;
             font-weight: 500;
@@ -57,19 +57,59 @@
         }
 
         .sidebar .nav-links a:hover {
-            color: #2c3e50;
-        }
-
-        .sidebar .nav-links a.active {
-            color: #2c3e50;
-            font-weight: 600;
+            color: #f0f0f0;
         }
 
         .sidebar .tagline {
             font-size: 0.9rem;
-            color: #666;
+            color: #b0b0b0;
             margin-bottom: 2rem;
             font-style: italic;
+        }
+
+        .sidebar .categories {
+            margin-top: 2rem;
+        }
+
+        .sidebar .categories h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #f0f0f0;
+        }
+
+        .sidebar .category-list {
+            list-style: none;
+        }
+
+        .sidebar .category-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar .category-list a {
+            color: #b0b0b0;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.25rem 0;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .sidebar .category-list a:hover {
+            color: #f0f0f0;
+            background-color: #404040;
+            padding-left: 0.5rem;
+        }
+
+        .sidebar .category-count {
+            font-size: 0.8rem;
+            color: #808080;
+            background-color: #404040;
+            padding: 0.1rem 0.4rem;
+            border-radius: 12px;
         }
 
         /* Main Content */
@@ -77,140 +117,78 @@
             flex: 1;
             margin-left: 280px;
             padding: 2rem;
-            background-color: #fff;
+            background-color: #1a1a1a;
         }
 
-        .about-header {
+        .post {
             margin-bottom: 3rem;
-            text-align: center;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #404040;
         }
 
-        .about-header h1 {
-            font-size: 2.5rem;
-            color: #2c3e50;
-            margin-bottom: 1rem;
+        .post:last-child {
+            border-bottom: none;
         }
 
-        .about-header .subtitle {
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 2rem;
-        }
-
-        .profile-section {
-            display: flex;
-            gap: 3rem;
-            margin-bottom: 3rem;
-            align-items: flex-start;
-        }
-
-        .profile-image {
-            flex-shrink: 0;
-        }
-
-        .profile-image img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #e9ecef;
-        }
-
-        .profile-placeholder {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background-color: #e9ecef;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-size: 1rem;
-            text-align: center;
-            border: 3px solid #e9ecef;
-        }
-
-        .profile-content {
-            flex: 1;
-        }
-
-        .section {
-            margin-bottom: 3rem;
-        }
-
-        .section h2 {
+        .post h2 {
             font-size: 1.5rem;
-            color: #2c3e50;
+            font-weight: 600;
             margin-bottom: 1rem;
-            border-bottom: 2px solid #e9ecef;
-            padding-bottom: 0.5rem;
+            color: #f0f0f0;
         }
 
-        .section p {
-            margin-bottom: 1rem;
-            color: #666;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-
-        .skill-category {
-            background-color: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid #e9ecef;
-        }
-
-        .skill-category h3 {
-            font-size: 1.1rem;
-            color: #2c3e50;
-            margin-bottom: 1rem;
-        }
-
-        .skill-category ul {
-            list-style: none;
-        }
-
-        .skill-category li {
-            padding: 0.25rem 0;
-            color: #666;
-        }
-
-        .contact-info {
-            background-color: #f8f9fa;
-            padding: 2rem;
-            border-radius: 8px;
-            border: 1px solid #e9ecef;
-        }
-
-        .contact-info h3 {
-            font-size: 1.2rem;
-            color: #2c3e50;
-            margin-bottom: 1rem;
-        }
-
-        .contact-links {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .contact-links a {
-            color: #3498db;
+        .post h2 a {
+            color: inherit;
             text-decoration: none;
-            padding: 0.5rem 1rem;
-            border: 1px solid #3498db;
-            border-radius: 4px;
+            transition: color 0.2s;
+        }
+
+        .post h2 a:hover {
+            color: #64b5f6;
+        }
+
+        .post-tags {
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #404040;
+            color: #b0b0b0;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            text-decoration: none;
             transition: all 0.2s;
         }
 
-        .contact-links a:hover {
-            background-color: #3498db;
-            color: white;
+        .tag:hover {
+            background-color: #64b5f6;
+            color: #1a1a1a;
+        }
+
+        .post-excerpt {
+            color: #b0b0b0;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .post-meta {
+            color: #808080;
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .post-date {
+            font-weight: 500;
+        }
+
+        .post-author {
+            font-weight: 500;
         }
 
         /* Responsive Design */
@@ -220,7 +198,7 @@
                 width: 100%;
                 height: auto;
                 border-right: none;
-                border-bottom: 1px solid #e9ecef;
+                border-bottom: 1px solid #404040;
             }
 
             .main-content {
@@ -231,18 +209,27 @@
             .container {
                 flex-direction: column;
             }
+        }
 
-            .profile-section {
-                flex-direction: column;
-                text-align: center;
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Loading animation */
+        .loading {
+            opacity: 0;
+            animation: fadeIn 0.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
             }
-
-            .about-header h1 {
-                font-size: 2rem;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     </style>
@@ -253,105 +240,160 @@
         <div class="sidebar">
             <h1>Sushanth Reddy</h1>
             <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html" class="active">About</a>
+                <a href="about.html">About</a>
             </div>
             <div class="tagline">My Blog</div>
+            
+            <div class="categories">
+                <h3>Categories</h3>
+                <ul class="category-list">
+                    <li><a href="#all">All <span class="category-count">12</span></a></li>
+                    <li><a href="#tech">Technology <span class="category-count">5</span></a></li>
+                    <li><a href="#programming">Programming <span class="category-count">4</span></a></li>
+                    <li><a href="#data">Data Science <span class="category-count">3</span></a></li>
+                    <li><a href="#personal">Personal <span class="category-count">2</span></a></li>
+                    <li><a href="#tutorials">Tutorials <span class="category-count">3</span></a></li>
+                    <li><a href="#projects">Projects <span class="category-count">4</span></a></li>
+                    <li><a href="#thoughts">Thoughts <span class="category-count">2</span></a></li>
+                </ul>
+            </div>
         </div>
 
         <!-- Main Content -->
         <div class="main-content">
-            <div class="about-header">
-                <h1>About Me</h1>
-                <p class="subtitle">ML Enthusiast • Aspiring Quant</p>
-            </div>
-
-            <div class="profile-section">
-                <div class="profile-image">
-                    <img src="your-photo.jpg" alt="Sushanth Reddy">
+            <article class="post loading">
+                <h2><a href="#post1">Natural Gas Price Analysis: A Data-Driven Approach</a></h2>
+                <div class="post-tags">
+                    <a href="#data" class="tag">data science</a>
+                    <a href="#python" class="tag">python</a>
+                    <a href="#analytics" class="tag">analytics</a>
+                    <a href="#finance" class="tag">finance</a>
+                    <a href="#visualization" class="tag">visualization</a>
                 </div>
-                <div class="profile-content">
-                    <div class="section">
-                        <h2>Introduction</h2>
-                        <p>
-                            Hi, I'm Sushanth Reddy, a passionate data science and ML enthusiast based in Hyderabad, India. 
-                            I love building things that solve real problems and exploring the intersection of technology and data.
-                        </p>
-                        <p>
-                            When I'm not coding, you can find me analyzing data patterns, finding weird correlations, writing about tech, or exploring new 
-                            technologies that can make a difference in people's lives.
-                        </p>
-                    </div>
+                <p class="post-excerpt">
+                    A comprehensive analysis of natural gas price trends from 2020 to 2024, exploring seasonal patterns, volatility, and market insights using Python and data visualization techniques.
+                </p>
+                <div class="post-meta">
+                    <span class="post-date">Jul 18, 2025</span>
+                    <span class="post-author">Sushanth Reddy</span>
                 </div>
-            </div>
+            </article>
 
-            <div class="section">
-                <h2>What I Do</h2>
-                <p>
-                    I am a sophomore at IIT Patna majoring in CS. I am analyzing complex datasets to extract 
-                    meaningful insights. My work spans quant finance, data science, and machine learning. I also try to participate in as many 
-                    hackathons or competitions live out there.
-                </p>
-                <p>
-                    I'm particularly interested in creating solutions that bridge the gap between technical complexity 
-                    and user-friendly experiences.
-                </p>
-            </div>
-
-            <div class="section">
-                <h2>Skills & Technologies</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Programming Languages</h3>
-                        <ul>
-                            <li>Python</li>
-                            <li>C</li>
-                            <li>C++</li>
-                            <li>MATLAB</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h3>Data & Analytics</h3>
-                        <ul>
-                            <li>Pandas</li>
-                            <li>NumPy</li>
-                            <li>Matplotlib</li>
-                            <li>Jupyter</li>
-                            <li>Seaborn</li>
-                            <li>Scikit-learn</li>
-                        </ul>
-                    </div>
-                    
+            <article class="post loading">
+                <h2><a href="#post2">Building Modern Web Applications with React and TypeScript</a></h2>
+                <div class="post-tags">
+                    <a href="#programming" class="tag">programming</a>
+                    <a href="#react" class="tag">react</a>
+                    <a href="#typescript" class="tag">typescript</a>
+                    <a href="#web" class="tag">web development</a>
                 </div>
-            </div>
-
-            <div class="section">
-                <h2>Experience</h2>
-                <p>
-                    I have worked as a Data Scientist Intern at Turing during my freshman year summer. During my internship, I trained various LLMs in the fields
-                    of math and physics, and also worked on fine-tuning AI agents.
+                <p class="post-excerpt">
+                    A deep dive into best practices for building scalable and maintainable web applications using React and TypeScript, covering component architecture, state management, and performance optimization.
                 </p>
-                <p>
-                    <!-- Add your specific experience details here -->
-                    Feel free to explore my projects and blog posts to see examples of my work and the thought process behind them.
-                </p>
-            </div>
-
-            <div class="section">
-                <h2>Get In Touch</h2>
-                <div class="contact-info">
-                    <h3>Let's Connect</h3>
-                    <p>I'm always interested in discussing new opportunities, collaborations, or just talking about technology and data.</p>
-                    <div class="contact-links">
-                        <a href="mailto:sushanthreddymula@gmail.com">Email</a>
-                        <a href="https://github.com/sushanth-mula" target="_blank">GitHub</a>
-                        <a href="https://linkedin.com/in/sushanth-reddy-mula-40759133a/" target="_blank">LinkedIn</a>
-                        <a href="https://x.com/SushanthRedddy" target="_blank">X</a>
-                    </div>
+                <div class="post-meta">
+                    <span class="post-date">Jul 15, 2025</span>
+                    <span class="post-author">Sushanth Reddy</span>
                 </div>
-            </div>
+            </article>
+
+            <article class="post loading">
+                <h2><a href="#post3">Machine Learning Pipeline Optimization: From Data to Deployment</a></h2>
+                <div class="post-tags">
+                    <a href="#data" class="tag">data science</a>
+                    <a href="#ml" class="tag">machine learning</a>
+                    <a href="#python" class="tag">python</a>
+                    <a href="#deployment" class="tag">deployment</a>
+                </div>
+                <p class="post-excerpt">
+                    Exploring efficient ways to build, test, and deploy machine learning models in production environments, with practical examples and real-world case studies.
+                </p>
+                <div class="post-meta">
+                    <span class="post-date">Jul 12, 2025</span>
+                    <span class="post-author">Sushanth Reddy</span>
+                </div>
+            </article>
+
+            <article class="post loading">
+                <h2><a href="#post4">The Art of Clean Code: Principles and Practices</a></h2>
+                <div class="post-tags">
+                    <a href="#programming" class="tag">programming</a>
+                    <a href="#best-practices" class="tag">best practices</a>
+                    <a href="#clean-code" class="tag">clean code</a>
+                    <a href="#software" class="tag">software engineering</a>
+                </div>
+                <p class="post-excerpt">
+                    Understanding the fundamental principles of writing clean, maintainable code that your future self and your team will thank you for. Practical tips and examples included.
+                </p>
+                <div class="post-meta">
+                    <span class="post-date">Jul 10, 2025</span>
+                    <span class="post-author">Sushanth Reddy</span>
+                </div>
+            </article>
+
+            <article class="post loading">
+                <h2><a href="#post5">Reflections on Remote Work and Digital Nomadism</a></h2>
+                <div class="post-tags">
+                    <a href="#personal" class="tag">personal</a>
+                    <a href="#remote-work" class="tag">remote work</a>
+                    <a href="#lifestyle" class="tag">lifestyle</a>
+                    <a href="#thoughts" class="tag">thoughts</a>
+                </div>
+                <p class="post-excerpt">
+                    Personal insights and lessons learned from years of remote work and digital nomadism. What works, what doesn't, and how to maintain work-life balance in a distributed world.
+                </p>
+                <div class="post-meta">
+                    <span class="post-date">Jul 8, 2025</span>
+                    <span class="post-author">Sushanth Reddy</span>
+                </div>
+            </article>
+
+            <article class="post loading">
+                <h2><a href="#post6">Building a Personal Knowledge Management System</a></h2>
+                <div class="post-tags">
+                    <a href="#productivity" class="tag">productivity</a>
+                    <a href="#knowledge" class="tag">knowledge management</a>
+                    <a href="#tools" class="tag">tools</a>
+                    <a href="#personal" class="tag">personal</a>
+                </div>
+                <p class="post-excerpt">
+                    How I built and maintain a personal knowledge management system that helps me capture, organize, and retrieve information effectively. Tools, workflows, and lessons learned.
+                </p>
+                <div class="post-meta">
+                    <span class="post-date">Jul 5, 2025</span>
+                    <span class="post-author">Sushanth Reddy</span>
+                </div>
+            </article>
         </div>
     </div>
+
+    <script>
+        // Add smooth loading animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const posts = document.querySelectorAll('.post');
+            posts.forEach((post, index) => {
+                setTimeout(() => {
+                    post.style.animationDelay = `${index * 0.1}s`;
+                }, index * 100);
+            });
+        });
+
+        // Add click handlers for category filtering
+        document.querySelectorAll('.category-list a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Add your filtering logic here
+                console.log('Filter by:', this.textContent);
+            });
+        });
+
+        // Add click handlers for tag filtering
+        document.querySelectorAll('.tag').forEach(tag => {
+            tag.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Add your tag filtering logic here
+                console.log('Filter by tag:', this.textContent);
+            });
+        });
+    </script>
 </body>
 </html>
